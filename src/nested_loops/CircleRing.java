@@ -10,8 +10,22 @@ public class CircleRing {
     public static void main(String[] args) throws Exception {
 
         // 1. Make a new Robot
-
-
+    		Robot C3PO = new Robot();
+    		C3PO.setX(150);
+    		C3PO.setY(200);
+    		C3PO.penDown();
+    		C3PO.setSpeed(10);
+    		 for (int i = 360; i > 0; i--) {
+				C3PO.move(3);
+				C3PO.turn(1);
+				if(i%20==0) {
+					for (int j = 360; j > 0; j--) {
+						C3PO.move(1);
+						C3PO.turn(1);
+						
+					}
+				}
+			}
        //  2. Set your robot’s position to x=150 and y=200
 
         // 3. Put the robot's pen down
